@@ -26,7 +26,12 @@ class MainWindow(QtWidgets.QMainWindow):
             print("Bitte eine korrekte CSV Datei einfügen!")
             return 1
         self.ui_pcdaten.lineSearch.setText(fname)
-        print(fname)
+
+        csvName = self.ui_pcdaten.lineSearch.text()
+        with open(csvName, "r", encoding="utf-8") as csvFile:
+            for line in csvFile:
+                print(line)
+
 
 
 window = MainWindow()
