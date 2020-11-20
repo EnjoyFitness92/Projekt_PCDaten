@@ -19,8 +19,14 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def browsefiles(self):
         # Problem: Wie kann der Standard Suchpfad so eingestellt werden, dass er direkt in Downloads landet
-        fname = QFileDialog.getOpenFileName(self, 'Open file', 'C:\%Username%\Downloads')
-        self.ui_pcdaten.lineSearch.setText(fname[0])
+        file = QFileDialog.getOpenFileName(self, 'Open file', 'C:\%Username%\Downloads')
+        fname = file[0]
+        if fname[-3:] != "csv":
+            # Fenster mit Warnung, dass inkorrekte Datei-Endung eingefügt wurde - evtl Prüfung ob richtiges Format
+            print("Bitte eine korrekte CSV Datei einfügen!")
+            return 1
+        self.ui_pcdaten.lineSearch.setText(fname)
+        print(fname)
 
 
 window = MainWindow()
