@@ -14,16 +14,18 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_setDevice(object):
     def setupUi(self, setDevice):
         setDevice.setObjectName("setDevice")
-        setDevice.resize(400, 300)
+        setDevice.resize(400, 94)
+        self.gridLayout = QtWidgets.QGridLayout(setDevice)
+        self.gridLayout.setObjectName("gridLayout")
         self.label = QtWidgets.QLabel(setDevice)
-        self.label.setGeometry(QtCore.QRect(20, 40, 351, 20))
         self.label.setObjectName("label")
+        self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
         self.inputCsv = QtWidgets.QLineEdit(setDevice)
-        self.inputCsv.setGeometry(QtCore.QRect(20, 80, 241, 22))
         self.inputCsv.setObjectName("inputCsv")
+        self.gridLayout.addWidget(self.inputCsv, 1, 0, 1, 1)
         self.searchCsv = QtWidgets.QPushButton(setDevice)
-        self.searchCsv.setGeometry(QtCore.QRect(270, 80, 93, 28))
         self.searchCsv.setObjectName("searchCsv")
+        self.gridLayout.addWidget(self.searchCsv, 1, 1, 1, 1)
 
         self.retranslateUi(setDevice)
         QtCore.QMetaObject.connectSlotsByName(setDevice)

@@ -11,15 +11,18 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
-    setdevice.cpp
+    setdevice.cpp \
+    setuser.cpp
 
 HEADERS += \
     mainwindow.h \
-    setdevice.h
+    setdevice.h \
+    setuser.h
 
 FORMS += \
     mainwindow.ui \
-    setdevice.ui
+    setdevice.ui \
+    setuser.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

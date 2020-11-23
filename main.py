@@ -6,19 +6,16 @@ from qtpy.QtWidgets import QFileDialog
 
 from ui_pcdaten.mainwindow import Ui_MainWindow
 from ui_pcdaten.setdevice import Ui_setDevice
+from ui_pcdaten.setuser import Ui_setUser
 
 # app = QtWidgets.QApplication(sys.argv)
 
-# class MainWindow(QtWidgets.QMainWindow):
-    # def __init__(self, parent=None):
-        # super().__init__(parent)
+class UserSetter(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.setUser = Ui_setUser()
+        self.setUser.setupUi(self)
 
-        # self.ui_pcdaten = Ui_mainwindow()
-        # self.ui_pcdaten.setupUi(self)
-        #self.ui_pcdaten.addPC.clicked(self.)
-
-
-    #def searchWindow(self):
 
 class DeviceSetter(QWidget):
     """
@@ -56,10 +53,16 @@ class MainWindow(QtWidgets.QMainWindow):
         self.ui_pcdaten.setupUi(self)
         # Wenn man auf Gerät hinzufügen klickt öffnet sich das Fenster openSetter
         self.ui_pcdaten.addDevice.clicked.connect(self.openSetDevice)
+        self.ui_pcdaten.addUser.clicked.connect(self.openSetUser)
 
     def openSetDevice(self, checked):
         self.w = DeviceSetter()
         self.w.show()
+
+    def openSetUser(self, checked):
+        self.w = UserSetter()
+        self.w.show()
+
 
 
 if __name__ == "__main__":

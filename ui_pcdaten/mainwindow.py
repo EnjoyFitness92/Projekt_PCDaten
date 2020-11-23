@@ -11,11 +11,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 600)
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+class Ui_PCDaten(object):
+    def setupUi(self, PCDaten):
+        PCDaten.setObjectName("PCDaten")
+        PCDaten.resize(800, 600)
+        self.centralwidget = QtWidgets.QWidget(PCDaten)
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName("gridLayout")
@@ -31,22 +31,22 @@ class Ui_MainWindow(object):
         self.searchDevice = QtWidgets.QPushButton(self.centralwidget)
         self.searchDevice.setObjectName("searchDevice")
         self.gridLayout.addWidget(self.searchDevice, 1, 0, 1, 1)
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        PCDaten.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(PCDaten)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 26))
         self.menubar.setObjectName("menubar")
-        MainWindow.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        PCDaten.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(PCDaten)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        PCDaten.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(PCDaten)
+        QtCore.QMetaObject.connectSlotsByName(PCDaten)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, PCDaten):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.addUser.setText(_translate("MainWindow", "Benutzer hinzufügen"))
-        self.pushButton_4.setText(_translate("MainWindow", "Benutzer suchen"))
-        self.addDevice.setText(_translate("MainWindow", "Gerät hinzufügen"))
-        self.searchDevice.setText(_translate("MainWindow", "Gerät suchen"))
+        PCDaten.setWindowTitle(_translate("PCDaten", "MainWindow"))
+        self.addUser.setText(_translate("PCDaten", "Benutzer hinzufügen"))
+        self.pushButton_4.setText(_translate("PCDaten", "Benutzer suchen"))
+        self.addDevice.setText(_translate("PCDaten", "Gerät hinzufügen"))
+        self.searchDevice.setText(_translate("PCDaten", "Gerät suchen"))
