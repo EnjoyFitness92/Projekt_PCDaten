@@ -1,27 +1,36 @@
 import sys
 # import csv
 from qtpy import QtWidgets
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 from qtpy.QtWidgets import QFileDialog
 
 from ui_pcdaten.mainwindow import Ui_MainWindow
-from ui_pcdaten.mainwindow_2 import Ui_mainwindow_2
+from ui_pcdaten.setdevice import Ui_setDevice
 
+# app = QtWidgets.QApplication(sys.argv)
 
-class MainWindow_2(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
-        super().__init__(parent)
+# class MainWindow(QtWidgets.QMainWindow):
+    # def __init__(self, parent=None):
+        # super().__init__(parent)
 
-        self.ui_pcdaten = Ui_mainwindow_2()
-        self.ui_pcdaten.setupUi(self)
+        # self.ui_pcdaten = Ui_mainwindow()
+        # self.ui_pcdaten.setupUi(self)
         #self.ui_pcdaten.addPC.clicked(self.)
 
 
     #def searchWindow(self):
 
-class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-        self.ui_pcdaten.pushButton.clicked.connect(self.browsefiles)
+class DeviceSetter(QWidget):
+    """
+    This "window" is a QWidget. If it has no parent, it
+    will appear as a free-floating window as we want.
+    """
+    def __init__(self):
+        super().__init__()
+        self.setDevice = Ui_setDevice()
+        self.setDevice.setupUi(self)
+
+        self.setDevice.searchCsv.clicked.connect(self.browsefiles)
 
     def browsefiles(self):
         # Problem: Wie kann der Standard Suchpfad so eingestellt werden, dass er direkt in Downloads landet
@@ -31,18 +40,30 @@ class MainWindow(QtWidgets.QMainWindow):
             # Fenster mit Warnung, dass inkorrekte Datei-Endung eingefügt wurde - evtl Prüfung ob richtiges Format
             print("Bitte eine korrekte CSV Datei einfügen!")
             return 1
-        self.ui_pcdaten.lineSearch.setText(fname)
+        self.setDevice.inputCsv.setText(fname)
 
-        csvName = self.ui_pcdaten.lineSearch.text()
+        csvName = self.setDevice.inputCsv.text()
         with open(csvName, "r", encoding="utf-8") as csvFile:
             for line in csvFile:
+                # Herausfischen der wichtigen Daten und abspeichern in einer temporären Liste
                 print(line)
 
-def main():
+
+class MainWindow(QtWidgets.QMainWindow):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.ui_pcdaten = Ui_MainWindow()
+        self.ui_pcdaten.setupUi(self)
+        # Wenn man auf Gerät hinzufügen klickt öffnet sich das Fenster openSetter
+        self.ui_pcdaten.addDevice.clicked.connect(self.openSetDevice)
+
+    def openSetDevice(self, checked):
+        self.w = DeviceSetter()
+        self.w.show()
+
+
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    main = MainWindow_2()
+    main = MainWindow()
     main.show()
     sys.exit(app.exec_())
-
-if __name__ == '__main__':
-    main()
