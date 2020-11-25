@@ -11,16 +11,22 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    searchdevice.cpp \
+    searchuser.cpp \
     setdevice.cpp \
     setuser.cpp
 
 HEADERS += \
     mainwindow.h \
+    searchdevice.h \
+    searchuser.h \
     setdevice.h \
     setuser.h
 
 FORMS += \
     mainwindow.ui \
+    searchdevice.ui \
+    searchuser.ui \
     setdevice.ui \
     setuser.ui
 

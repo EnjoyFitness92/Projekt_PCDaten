@@ -4,11 +4,28 @@ from qtpy import QtWidgets
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 from qtpy.QtWidgets import QFileDialog
 
-from ui_pcdaten.mainwindow import Ui_MainWindow
+from ui_pcdaten.mainwindow import Ui_PCDaten
 from ui_pcdaten.setdevice import Ui_setDevice
 from ui_pcdaten.setuser import Ui_setUser
+from ui_pcdaten.searchdevice import Ui_searchDevice
+from ui_pcdaten.searchuser import Ui_searchUser
 
 # app = QtWidgets.QApplication(sys.argv)
+
+
+class UserSearcher(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.searchUser = Ui_searchUser()
+        self.searchUser.setupUi(self)
+
+
+class DeviceSearcher(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.searchDevice = Ui_searchDevice()
+        self.searchDevice.setupUi(self)
+
 
 class UserSetter(QWidget):
     def __init__(self):
@@ -46,14 +63,18 @@ class DeviceSetter(QWidget):
                 print(line)
 
 
+# Klasse des Hauptmenüs mit der Struktur über den Aufruf der weiteren Fenster
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui_pcdaten = Ui_MainWindow()
+        self.ui_pcdaten = Ui_PCDaten()
         self.ui_pcdaten.setupUi(self)
-        # Wenn man auf Gerät hinzufügen klickt öffnet sich das Fenster openSetter
+
+        # Wenn man auf Gerät hinzufügen klickt öffnet sich das Fenster openSetter und bei den anderen Buttons identischer Vorgang
         self.ui_pcdaten.addDevice.clicked.connect(self.openSetDevice)
         self.ui_pcdaten.addUser.clicked.connect(self.openSetUser)
+        self.ui_pcdaten.searchDevice.clicked.connect(self.openSearchDevice)
+        self.ui_pcdaten.searchUser.clicked.connect(self.openSearchUser)
 
     def openSetDevice(self, checked):
         self.w = DeviceSetter()
@@ -63,6 +84,13 @@ class MainWindow(QtWidgets.QMainWindow):
         self.w = UserSetter()
         self.w.show()
 
+    def openSearchDevice(self, checked):
+        self.w = DeviceSearcher()
+        self.w.show()
+
+    def openSearchUser(self, checked):
+        self.w = UserSearcher()
+        self.w.show()
 
 
 if __name__ == "__main__":
