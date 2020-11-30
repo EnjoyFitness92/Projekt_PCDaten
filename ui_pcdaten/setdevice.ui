@@ -7,215 +7,15 @@
     <x>0</x>
     <y>0</y>
     <width>625</width>
-    <height>780</height>
+    <height>844</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="11" column="1">
-    <widget class="QCheckBox" name="zurAusmusterung">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="18" column="0">
-    <widget class="QLabel" name="label_17">
-     <property name="text">
-      <string>Arbeitsspeicher</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="1">
-    <widget class="QLineEdit" name="roomNum"/>
-   </item>
-   <item row="5" column="1">
-    <widget class="QLineEdit" name="department"/>
-   </item>
-   <item row="20" column="0">
-    <widget class="QLabel" name="label_19">
-     <property name="text">
-      <string>Betriebssystem</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="user"/>
-   </item>
-   <item row="10" column="0">
-    <widget class="QLabel" name="label_9">
-     <property name="text">
-      <string>Augemustert</string>
-     </property>
-    </widget>
-   </item>
-   <item row="26" column="1">
-    <widget class="QCheckBox" name="hisRdpGate">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="14" column="0">
-    <widget class="QLabel" name="label_13">
-     <property name="text">
-      <string>MAC-Addr.</string>
-     </property>
-    </widget>
-   </item>
-   <item row="25" column="1">
-    <widget class="QCheckBox" name="teamView">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
    <item row="8" column="1">
     <widget class="QCheckBox" name="termServ">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="21" column="1">
-    <widget class="QTextEdit" name="sccmData"/>
-   </item>
-   <item row="1" column="1">
-    <widget class="QPushButton" name="searchCsv">
-     <property name="text">
-      <string>Durchsuchen</string>
-     </property>
-    </widget>
-   </item>
-   <item row="26" column="0">
-    <widget class="QLabel" name="label_25">
-     <property name="text">
-      <string>HIS-RDP-Gateway</string>
-     </property>
-    </widget>
-   </item>
-   <item row="11" column="0">
-    <widget class="QLabel" name="label_10">
-     <property name="text">
-      <string>Zur Ausmusterung</string>
-     </property>
-    </widget>
-   </item>
-   <item row="16" column="1">
-    <widget class="QLineEdit" name="serialNumber"/>
-   </item>
-   <item row="16" column="0">
-    <widget class="QLabel" name="label_15">
-     <property name="text">
-      <string>SerienNr.</string>
-     </property>
-    </widget>
-   </item>
-   <item row="18" column="1">
-    <widget class="QLineEdit" name="ram"/>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="inputCsv"/>
-   </item>
-   <item row="17" column="1">
-    <widget class="QLineEdit" name="comTyp"/>
-   </item>
-   <item row="27" column="0">
-    <widget class="QPushButton" name="insertData">
-     <property name="text">
-      <string>Einfügen</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="label_5">
-     <property name="text">
-      <string>Inventarisierungsnr.</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Hinzufügen der CSV Datei:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="20" column="1">
-    <widget class="QLineEdit" name="operatingSys"/>
-   </item>
-   <item row="13" column="1">
-    <widget class="QLineEdit" name="hostName"/>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_2">
-     <property name="text">
-      <string>Benutzer</string>
-     </property>
-    </widget>
-   </item>
-   <item row="19" column="1">
-    <widget class="QCheckBox" name="winVers">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="8" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="text">
-      <string>Terminal-Server</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1">
-    <widget class="QLineEdit" name="useOfDev"/>
-   </item>
-   <item row="23" column="1">
-    <widget class="QLineEdit" name="storageDrive"/>
-   </item>
-   <item row="13" column="0">
-    <widget class="QLabel" name="label_12">
-     <property name="text">
-      <string>Hostname</string>
-     </property>
-    </widget>
-   </item>
-   <item row="10" column="1">
-    <widget class="QCheckBox" name="ausmusterung">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Nutzung</string>
-     </property>
-    </widget>
-   </item>
-   <item row="12" column="0">
-    <widget class="QLabel" name="label_11">
-     <property name="text">
-      <string>RaumNr.</string>
-     </property>
-    </widget>
-   </item>
-   <item row="25" column="0">
-    <widget class="QLabel" name="label_24">
-     <property name="text">
-      <string>Teamviewer</string>
-     </property>
-    </widget>
-   </item>
-   <item row="22" column="1">
-    <widget class="QLineEdit" name="processor"/>
-   </item>
-   <item row="9" column="1">
-    <widget class="QCheckBox" name="vdv">
      <property name="text">
       <string/>
      </property>
@@ -228,23 +28,86 @@
      </property>
     </widget>
    </item>
-   <item row="22" column="0">
-    <widget class="QLabel" name="label_21">
-     <property name="text">
-      <string>Prozessor</string>
+   <item row="15" column="1">
+    <widget class="QLineEdit" name="ipAddr"/>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="user">
+     <property name="dragEnabled">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
    <item row="6" column="1">
     <widget class="QLineEdit" name="invNum"/>
    </item>
-   <item row="14" column="1">
-    <widget class="QLineEdit" name="MacAddr"/>
+   <item row="14" column="0">
+    <widget class="QLabel" name="label_13">
+     <property name="text">
+      <string>MAC-Addr.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="idRechner">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="15" column="0">
+    <widget class="QLabel" name="label_14">
+     <property name="text">
+      <string>IP-Addr.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="26" column="1">
+    <widget class="QCheckBox" name="hisRdpGate">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
    </item>
    <item row="5" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
       <string>Bereich</string>
+     </property>
+    </widget>
+   </item>
+   <item row="18" column="0">
+    <widget class="QLabel" name="label_17">
+     <property name="text">
+      <string>Arbeitsspeicher</string>
+     </property>
+    </widget>
+   </item>
+   <item row="25" column="1">
+    <widget class="QCheckBox" name="teamView">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="26" column="0">
+    <widget class="QLabel" name="label_25">
+     <property name="text">
+      <string>HIS-RDP-Gateway</string>
+     </property>
+    </widget>
+   </item>
+   <item row="10" column="0">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Augemustert</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Hinzufügen der CSV Datei:</string>
      </property>
     </widget>
    </item>
@@ -255,15 +118,59 @@
      </property>
     </widget>
    </item>
-   <item row="23" column="0">
-    <widget class="QLabel" name="label_22">
+   <item row="10" column="1">
+    <widget class="QCheckBox" name="ausmusterung">
      <property name="text">
-      <string>HD (Speicherplatz)</string>
+      <string/>
      </property>
     </widget>
    </item>
-   <item row="15" column="1">
-    <widget class="QLineEdit" name="ipAddr"/>
+   <item row="19" column="1">
+    <widget class="QCheckBox" name="winVers">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0">
+    <widget class="QLabel" name="label_10">
+     <property name="text">
+      <string>Zur Ausmusterung</string>
+     </property>
+    </widget>
+   </item>
+   <item row="22" column="0">
+    <widget class="QLabel" name="label_21">
+     <property name="text">
+      <string>Prozessor</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="0">
+    <widget class="QLabel" name="label_12">
+     <property name="text">
+      <string>Hostname</string>
+     </property>
+    </widget>
+   </item>
+   <item row="13" column="1">
+    <widget class="QLineEdit" name="hostName"/>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="department"/>
+   </item>
+   <item row="17" column="0">
+    <widget class="QLabel" name="label_16">
+     <property name="text">
+      <string>Rechner Typ</string>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="1">
+    <widget class="QLineEdit" name="serialNumber"/>
+   </item>
+   <item row="23" column="1">
+    <widget class="QLineEdit" name="storageDrive"/>
    </item>
    <item row="7" column="0">
     <widget class="QLabel" name="label_6">
@@ -272,15 +179,22 @@
      </property>
     </widget>
    </item>
-   <item row="7" column="1">
-    <widget class="QCheckBox" name="hisDom">
+   <item row="24" column="0">
+    <widget class="QLabel" name="label_23">
      <property name="text">
-      <string/>
+      <string>Archiv24</string>
      </property>
     </widget>
    </item>
-   <item row="24" column="1">
-    <widget class="QCheckBox" name="archiv24">
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Nutzung</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="1">
+    <widget class="QCheckBox" name="zurAusmusterung">
      <property name="text">
       <string/>
      </property>
@@ -293,6 +207,114 @@
      </property>
     </widget>
    </item>
+   <item row="21" column="1">
+    <widget class="QTextEdit" name="sccmData"/>
+   </item>
+   <item row="17" column="1">
+    <widget class="QLineEdit" name="comTyp"/>
+   </item>
+   <item row="27" column="0">
+    <widget class="QPushButton" name="insertData">
+     <property name="text">
+      <string>Einfügen</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="1">
+    <widget class="QCheckBox" name="hisDom">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="14" column="1">
+    <widget class="QLineEdit" name="MacAddr"/>
+   </item>
+   <item row="20" column="1">
+    <widget class="QLineEdit" name="operatingSys"/>
+   </item>
+   <item row="20" column="0">
+    <widget class="QLabel" name="label_19">
+     <property name="text">
+      <string>Betriebssystem</string>
+     </property>
+    </widget>
+   </item>
+   <item row="25" column="0">
+    <widget class="QLabel" name="label_24">
+     <property name="text">
+      <string>Teamviewer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="23" column="0">
+    <widget class="QLabel" name="label_22">
+     <property name="text">
+      <string>HD (Speicherplatz)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="24" column="1">
+    <widget class="QCheckBox" name="archiv24">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="16" column="0">
+    <widget class="QLabel" name="label_15">
+     <property name="text">
+      <string>SerienNr.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="0">
+    <widget class="QLabel" name="label_11">
+     <property name="text">
+      <string>RaumNr.</string>
+     </property>
+    </widget>
+   </item>
+   <item row="12" column="1">
+    <widget class="QLineEdit" name="roomNum"/>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLineEdit" name="useOfDev"/>
+   </item>
+   <item row="18" column="1">
+    <widget class="QLineEdit" name="ram"/>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="inputCsv"/>
+   </item>
+   <item row="9" column="1">
+    <widget class="QCheckBox" name="vdv">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Benutzer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="searchCsv">
+     <property name="text">
+      <string>Durchsuchen</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>Terminal-Server</string>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="0">
     <widget class="QLabel" name="label_26">
      <property name="text">
@@ -300,29 +322,15 @@
      </property>
     </widget>
    </item>
-   <item row="15" column="0">
-    <widget class="QLabel" name="label_14">
+   <item row="22" column="1">
+    <widget class="QLineEdit" name="processor"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_5">
      <property name="text">
-      <string>IP-Addr.</string>
+      <string>Inventarisierungsnr.</string>
      </property>
     </widget>
-   </item>
-   <item row="17" column="0">
-    <widget class="QLabel" name="label_16">
-     <property name="text">
-      <string>Rechner Typ</string>
-     </property>
-    </widget>
-   </item>
-   <item row="24" column="0">
-    <widget class="QLabel" name="label_23">
-     <property name="text">
-      <string>Archiv24</string>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="idRechner"/>
    </item>
   </layout>
  </widget>

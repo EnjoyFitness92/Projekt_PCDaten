@@ -35,6 +35,85 @@ class UserSetter(QWidget):
         self.setUser = Ui_setUser()
         self.setUser.setupUi(self)
 
+        try:
+            con_string = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=G:\Projekt Inventardb\Inventar.accdb;'
+            conn = pyodbc.connect(con_string)
+            cursor = conn.cursor()
+
+            # Auswahl der höchsten aktuellen Pers_ID
+            cursor.execute('Select max(Pers_ID) FROM Benutzer')
+
+            # Zum Testen welches die höchste Pers_ID ist
+            # print(cursor.fetchall()[0][0])
+            idUser = str(int(cursor.fetchall()[0][0]) + 1)
+            self.setUser.persID.setText(idUser)
+
+
+        except pyodbc.Error as e:
+            print("Error in Connection", e)
+
+        self.setUser.insertData.clicked.connect(self.insertUser)
+
+
+    def insertUser(self):
+        # Problem beim Einfügen da die Datenbank mit einer weiteren ID arbeitet
+        # Aufgabe: Abklären was man tun kann damit man Datenbankelemente einbinden kann in QT
+
+
+        dep = self.setUser.department.text()
+        def switchDep(argument):
+            switcher = {
+                'Finanzen': 5,
+                'Studium': 1,
+                'Bibliothek': 2,
+                'Auslandsamt': 3,
+                'Rechenzentrum': 4,
+                'ZWW/IAFW': 6,
+                'Personal': 7,
+                'HL': 8,
+                'Sprecherrat': 9,
+                'QuO': 10,
+                'IAFW': 11,
+                'ÖA': 12,
+                # Doppelter Eintrag in der AccessDB
+                #'Sprecherrat': 13,
+                'Zentrale Server u. Dienste': 14,
+                'Reserve VW': 15,
+                'TB': 16,
+                'Benutzerbetrueuung': 17,
+                '': 4
+            }
+            return switcher.get(argument, 4)
+
+        # Ausnahmefälle beachten - z.b. wenn firstName und surname nicht inkludiert sind
+        persID = self.setUser.firstName.text()
+        firstName = self.setUser.firstName.text()
+        surname = self.setUser.surName.text()
+        telNum = self.setUser.telNum.text()
+        department = int(switchDep(dep))
+        room = self.setUser.room.text()
+        ndsId = self.setUser.ndsId.text()
+        archiv24User = False
+
+        if self.setUser.archiv24User.isChecked():
+            archiv24User = True
+
+        try:
+            con_string = r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=G:\Projekt Inventardb\Inventar.accdb;'
+            conn = pyodbc.connect(con_string)
+            cursor = conn.cursor()
+
+            #myuser = (persID, firstName, surname, telNum, room,, ndsId, archiv24User)
+            cursor.execute('INSERT INTO Benutzer VALUES(?,?)', persID, firstName)
+            conn.commit()
+            #print('Data Inserted')
+            #name = 'Seitz'
+
+            #cursor.execute('Select "Abteilung"  FROM Benutzer Where Nachname = ?', name)
+            #print(cursor.fetchall())
+        except pyodbc.Error as e:
+            print("Error in Connection", e)
+
 # Klasse für das Einfügen eines neuen Rechners
 class DeviceSetter(QWidget):
     """
@@ -102,6 +181,8 @@ class DeviceSetter(QWidget):
             #print(cursor.fetchall()[0][0])
             idPC = str(int(cursor.fetchall()[0][0])+1)
             self.setDevice.idRechner.setText(idPC)
+
+            cursor.execute('Select Benutzer From Geräte')
 
         except pyodbc.Error as e:
             print("Error in Connection", e)

@@ -36,24 +36,24 @@
     </widget>
    </item>
    <item row="4" column="1">
-    <widget class="QLineEdit" name="lineEdit_2"/>
+    <widget class="QLineEdit" name="surName"/>
    </item>
    <item row="5" column="1">
-    <widget class="QLineEdit" name="lineEdit_3"/>
+    <widget class="QLineEdit" name="telNum"/>
    </item>
    <item row="7" column="1">
-    <widget class="QLineEdit" name="lineEdit_5"/>
+    <widget class="QLineEdit" name="department"/>
    </item>
    <item row="8" column="1">
-    <widget class="QLineEdit" name="lineEdit_6"/>
+    <widget class="QLineEdit" name="room"/>
    </item>
    <item row="9" column="1">
-    <widget class="QLineEdit" name="lineEdit_7"/>
+    <widget class="QLineEdit" name="ndsId"/>
    </item>
    <item row="11" column="1">
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="insertData">
      <property name="text">
-      <string>PushButton</string>
+      <string>Einfügen</string>
      </property>
     </widget>
    </item>
@@ -65,9 +65,12 @@
     </widget>
    </item>
    <item row="10" column="1">
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="archiv24User">
      <property name="text">
       <string/>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
      </property>
     </widget>
    </item>
@@ -79,7 +82,7 @@
     </widget>
    </item>
    <item row="3" column="1">
-    <widget class="QLineEdit" name="lineEdit_4"/>
+    <widget class="QLineEdit" name="firstName"/>
    </item>
    <item row="7" column="0">
     <widget class="QLabel" name="label_6">
@@ -103,7 +106,7 @@
     </widget>
    </item>
    <item row="2" column="1">
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="persID"/>
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label_9">
