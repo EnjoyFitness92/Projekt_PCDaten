@@ -90,7 +90,7 @@ class UserSetter(QWidget):
         firstName = self.setUser.firstName.text()
         surname = self.setUser.surName.text()
         telNum = self.setUser.telNum.text()
-        department = int(switchDep(dep))
+        department = switchDep(dep)
         room = self.setUser.room.text()
         ndsId = self.setUser.ndsId.text()
         archiv24User = False
@@ -104,7 +104,7 @@ class UserSetter(QWidget):
             cursor = conn.cursor()
 
             #myuser = (persID, firstName, surname, telNum, room,, ndsId, archiv24User)
-            cursor.execute('INSERT INTO Benutzer VALUES(?,?)', persID, firstName)
+            cursor.execute('INSERT INTO Benutzer VALUES(?,?,?,?,?,?,?,?)', int(persID), firstName, surname, telNum, room, department, ndsId, archiv24User)
             conn.commit()
             #print('Data Inserted')
             #name = 'Seitz'
